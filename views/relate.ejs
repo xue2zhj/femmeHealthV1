@@ -74,10 +74,32 @@
       margin-top: 30px;
       color: #777;
     }
+
+
+    /* Style for the back button */
+    .back-button {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color:  #45a049;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      background-color:#4CAF50;
+    }
   </style>
 </head>
 <body>
+  
   <header>
+     <!-- Back button -->
+   <button class="back-button" onclick="goBack()">Back</button>
     <h1>You Are Not Alone</h1>
     <p>Search for academic resources related to your health condition</p>
   </header>
@@ -124,5 +146,13 @@
   <footer>
     <p>Remember, you are not alone. Together, we can find the support you need.</p>
   </footer>
+
+  <script>
+    // Function to go back to the previous page
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
 </body>
 </html>

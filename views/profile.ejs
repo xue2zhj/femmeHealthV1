@@ -52,6 +52,18 @@
       color: #333;
     }
 
+    /* Style for the help icon */
+    .help-icon {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+      margin-left: 20px;
+    }
+
+
      /* Dialog styling */
      .dialog-overlay {
       display: none;
@@ -130,6 +142,15 @@
       font-weight: bold;
     }
 
+    /* Style for the plus icon */
+    .plus-icon {
+      font-size: 20px;
+      cursor: pointer;
+      color: #333;
+    }
+
+
+
 
   </style>
 
@@ -137,12 +158,21 @@
 <body>
   <!-- <h1  id="greeting">Welcome, <b><%= user.name %></b>!</h1> -->
   <div class="greeting">
-    <div class="avatar-container">
+    <div class="avatar-container" onclick="openPredictDialog()">
     &nbsp;&nbsp;<i class="fas fa-user-circle" style="font-size: 30px;"></i> <div class="notification-circle">!</div><!-- Font Awesome avatar icon -->
      Good Morning, <b><%= user.name %></b> ! </div>
 
-     <!-- Right: Settings icon -->
+     <!-- Right: Plus icon -->
+    <i class="fas fa-plus plus-icon" onclick="openDialog()"></i> <!-- Plus icon -->
+     <!-- Right: Settings icon 
     <i class="fas fa-cog settings-icon" onclick="openDialog()"></i>
+
+    
+    -->
+
+     <!-- Help Icon that redirects to /relate -->
+     <i class="fas fa-question-circle help-icon" onclick="redirectToRelate()"></i> <!-- Help icon -->
+ 
   </div>
 
 
@@ -211,6 +241,17 @@
   </div>
 </div>
 
+
+<!-- Dialog Overlay -->
+<div id="dialog-overlay-predict" class="dialog-overlay" style="height:600px">
+  <div class="dialog-box">
+    <!-- Iframe content -->
+    <div class="iframe-container">
+      <iframe src="/index.html" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+    <button type="button" onclick="closePredictDialog()">Close</button>
+  </div>
+</div>
 
 
   <!-- <p>Age: <%= user.age %> &nbsp;&nbsp;&nbsp;&nbsp; <%= user.profession %></p> -->
@@ -426,6 +467,11 @@ function closeDialog() {
   document.getElementById('dialog-overlay').style.display = 'none';
 }
 
+// Function to close the dialog
+function closePredictDialog() {
+  document.getElementById('dialog-overlay-predict').style.display = 'none';
+}
+
 // Function to open a specific tab
 function openTab(event, tabName) {
   var i, tabcontent, tabs;
@@ -465,6 +511,16 @@ function updateHeight() {
 function updateWeight() {
   var weight = document.getElementById('weight-slider').value;
   document.getElementById('weight-value').textContent = weight + ' kg';
+}
+
+
+function redirectToRelate() {
+  window.location.href = '/relate';
+}
+
+ // Function to open the dialog
+ function openPredictDialog() {
+  document.getElementById('dialog-overlay-predict').style.display = 'flex';
 }
 
   </script>
