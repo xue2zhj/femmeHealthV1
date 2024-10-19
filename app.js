@@ -30,7 +30,7 @@ app.get('/profile', (req, res) => {
     age: 35,
     profession: 'Engineer',
     hobbies: ['Volumes', 'Cramping', 'Poops'],
-    alerts:['Pay attention to your coming period.']
+    alerts:['Pay attention to your coming period. (7 days left)']
   };
 
   // 渲染 profile.ejs 页面
