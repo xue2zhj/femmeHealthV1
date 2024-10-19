@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+iframe {
+    border: none;
+  }
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.profile-info {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #555;
+}
+
+/* Style for the button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+/* Style for the buttons */
+.button-container button {
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+/* Hover effect for buttons */
+.button-container button:hover {
+    background-color: #45a049;
+}
+
+
+/* General styling for the UL */
+ul.alert-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  /* Styling for individual list items */
+  ul.alert-list li {
+    background-color: #f8d7da; /* Light red background to indicate alert */
+    color: #721c24; /* Dark red text color for contrast */
+    border: 1px solid #f5c6cb; /* Border matching the background */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Optional: add an icon to each alert (e.g., exclamation icon) */
+  ul.alert-list li::before {
+    content: "⚠️"; /* Unicode for warning sign */
+    margin-right: 10px;
+    font-size: 1.2em;
+  }
+
+  /* Hover effect for list items */
+  ul.alert-list li:hover {
+    background-color: #f1b0b7; /* Slightly darker red on hover */
+  }
+
+ /* Styling for the smaller, left-aligned welcome message */
+ h1#greeting {
+    font-size: 18px; /* Smaller font size for a compact look */
+    font-weight: normal; /* Lighter font weight */
+    color: #333; /* Dark gray text color */
+    margin: 5px 0px -15px 5px; /* Reduce margin for smaller height */
+    padding: 5px; /* No padding to further reduce height */
+    line-height: 1.2; /* Adjust line height to reduce spacing */
+    text-align: left; /* Align the text to the left */
+}
+
+/* Optional: Responsive adjustment for even smaller screens */
+@media (max-width: 768px) {
+  h1#greeting {
+    font-size: 16px; /* Further reduction on mobile screens */
+  }
+}

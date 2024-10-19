@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You Are Not Alone - Search Health Resources</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {     
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+    }
+
+    header.choice1 {        
+      background-color: #0074D9;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0;
+    }
+    main {
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    form {
+      margin: 20px 0;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 500px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #2a812d;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005fa3;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin: 10px 0;
+    }
+    a {
+      color: #0074D9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 30px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>You Are Not Alone</h1>
+    <p>Search for academic resources related to your health condition</p>
+  </header>
+  
+  <main>
+    <div class="container">
+      <h2>Find Support Through Knowledge</h2>
+      <p>
+        Whether you're dealing with a health condition or supporting someone who is, academic resources can provide the knowledge and support you need. 
+        Use the search below to find helpful studies, articles, and papers related to your specific condition.
+      </p>
+      
+      <!-- Search form -->
+      <form action="/search" method="GET">
+        <input type="text" name="query" placeholder="Enter health condition (e.g., diabetes, anxiety)" required>
+        <button type="submit">Search</button>
+      </form>
+
+      <!-- Links to academic resources -->
+      <h3>Featured Academic Resources</h3>
+      <ul>
+        <li>
+          <a href="https://www.hkmj.org/abstracts/v27n6/399.htm" target="_blank">
+            Pictorial Blood Loss Assessment Chart for evaluating heavy menstrual bleeding in Asian women
+          </a>
+          - Hong Kong Medical Journal (Volume 27, Issue 6)
+        </li>
+        <li>
+          <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7045584/" target="_blank">
+            Cardiorespiratory fitness and accelerometer
+          </a>
+          - National Center for Biotechnology Information
+        </li>
+        <li>
+          <a href="https://journals.sagepub.com/doi/10.1177/21501327211023370" target="_blank">
+            Chronic Pain and Psychological Well-being
+          </a>
+          - Sage Journals
+        </li>
+      </ul>
+    </div>
+  </main>
+  
+  <footer>
+    <p>Remember, you are not alone. Together, we can find the support you need.</p>
+  </footer>
+</body>
+</html>
